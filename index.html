@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja" class="lang-ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Cam - サポート / Support</title>
+    <style>
+        :root {
+            --primary: #8C4D00;
+            --bg: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text: #1D1D1F;
+            --text-secondary: #5C5C61;
+            --border: #E5E5EA;
+            --button-bg: #8C4D00;
+            --button-text: #FFFFFF;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #FFB340;
+                --bg: #1C1C1E;
+                --card-bg: #2C2C2E;
+                --text: #F5F5F7;
+                --text-secondary: #A1A1A6;
+                --border: #38383A;
+                --button-bg: #FFB340;
+                --button-text: #1C1C1E;
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+        }
+        .hero {
+            background: linear-gradient(160deg, #000000, #2C2C2E);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .hero h1 { font-weight: 700; margin-bottom: 8px; }
+        .hero p { font-size: 1.1em; opacity: 0.95; }
+        .hero .accent { width: 64px; height: 4px; border-radius: 2px; background: #FFB340; margin: 16px auto 0; }
+        .container { max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .card h2 { font-size: 1.3em; margin-bottom: 16px; color: var(--primary); }
+        .card h3 { font-size: 1.05em; margin: 16px 0 8px; }
+        .card p, .card li { color: var(--text-secondary); font-size: 0.95em; }
+        .card p + p { margin-top: 8px; }
+        .card ul, .card ol { padding-left: 20px; }
+        .card li { margin-bottom: 6px; }
+        .card a { color: var(--primary); word-break: break-all; }
+        .faq-item { margin-bottom: 16px; }
+        .faq-item summary { font-weight: 600; cursor: pointer; padding: 8px 0; list-style: none; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::before { content: "Q. "; color: var(--primary); }
+        .faq-item p { padding: 4px 0 0 24px; }
+        .card a.contact-link {
+            display: inline-block;
+            background: var(--button-bg);
+            color: var(--button-text);
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-top: 12px;
+            word-break: normal;
+        }
+        .card a.contact-link:hover { opacity: 0.85; }
+        .back-link { display: inline-block; color: var(--primary); text-decoration: none; padding: 8px 0 16px; font-size: 0.9em; }
+        .back-link:hover { text-decoration: underline; }
+        nav { text-align: center; padding: 16px 20px 0; }
+        nav a { color: var(--primary); text-decoration: none; margin: 0 10px; font-size: 0.9em; display: inline-block; }
+        nav a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 32px 20px; font-size: 0.8em; color: var(--text-secondary); }
+        footer a { color: var(--primary); }
+        .lang-switch { text-align: center; padding: 10px 0 0; }
+        .lang-switch button {
+            background: none;
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+            padding: 5px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .lang-switch button:hover { background: var(--button-bg); color: var(--button-text); }
+        .hero .lang-switch button { border-color: #fff; color: #fff; }
+        .hero .lang-switch button:hover { background: #fff; color: #1C1C1E; }
+        html.lang-ja [lang="en"] { display: none !important; }
+        html.lang-en [lang="ja"] { display: none !important; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1 style="font-size:2.4em;">Bright Cam</h1>
+    <p lang="ja">処理を最小限に抑えた、自然な写りのカメラ</p>
+    <p lang="en">A camera with minimal processing for natural-looking photos</p>
+    <div class="accent" aria-hidden="true"></div>
+</div>
+
+<div class="lang-switch">
+    <button onclick="toggleLang()">English / 日本語</button>
+</div>
+
+<nav>
+    <span lang="ja">
+        <a href="#start">はじめに</a>
+        <a href="#features">使い方</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+    </span>
+    <span lang="en">
+        <a href="#start">Getting Started</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </span>
+</nav>
+
+<div class="container">
+
+    <!-- はじめに / Getting Started -->
+    <div class="card" id="start">
+        <h2 lang="ja">はじめに</h2>
+        <h2 lang="en">Getting Started</h2>
+        <p lang="ja">Bright Cam は、処理を最小限に抑えた、自然な写りのカメラです。</p>
+        <p lang="en">Bright Cam is a camera with minimal processing for natural-looking photos.</p>
+        <p lang="ja">「処理なし」では、AI や複数枚の合成、シャープ、局所的なトーン補正をかけません。ノイズ消しはごく弱く、レンズの歪み補正はします。</p>
+        <p lang="en">Unprocessed shots use no AI, no multi-frame merging, no sharpening and no local tone mapping. Noise reduction is very light, and lens distortion is corrected.</p>
+        <ol lang="ja" style="margin-top:12px;">
+            <li><strong>撮影画面を開く</strong>：Bright Cam を開くと、すぐに撮影画面になります。初めてのときは、カメラと「写真」への追加の許可をお願いします。</li>
+            <li><strong>仕上げを選ぶ</strong>：画面の下にある「そのまま」「風景」「人物」「鮮やか」から選びます。迷ったら「そのまま」で大丈夫です。</li>
+            <li><strong>シャッターを押す</strong>：大きな丸いシャッターか、音量ボタンで撮ります。撮った写真は自動で「写真」アプリに保存されます。</li>
+        </ol>
+        <ol lang="en" style="margin-top:12px;">
+            <li><strong>Open the camera screen</strong>: Bright Cam opens straight to the camera. The first time, it asks for permission to use the camera and to add to Photos.</li>
+            <li><strong>Pick a finish</strong>: Choose Natural, Landscape, Portrait or Vivid below the preview. If you are unsure, Natural is a good start.</li>
+            <li><strong>Press the shutter</strong>: Tap the large round shutter or press a volume button. Your photo is saved to the Photos app automatically.</li>
+        </ol>
+    </div>
+
+    <!-- 使い方 / Features -->
+    <div class="card" id="features">
+        <h2 lang="ja">機能ごとの使い方</h2>
+        <h2 lang="en">Features</h2>
+
+        <div lang="ja">
+            <h3>仕上げ（4つ）</h3>
+            <p>撮ったあとの色の仕上げを4つから選べます。「そのまま」と「風景」は無料です。「風景」は、空の青と緑を少し深く、コントラストをわずかに上げます。「人物」は肌の色を保ち、ほんのり暖かく。「鮮やか」は、くすんだ色ほど強く鮮やかにします。「人物」と「鮮やか」は有料です。プレビューも選んだ仕上げの色で表示されますが、プレビューは目安で、保存した写真と色や明るさがわずかに違うことがあります。</p>
+            <h3>シンプルとマニュアル</h3>
+            <p>「シンプル」では、画面をタップするとその場所にピントと明るさが合い、スライダーで明るさを調整できます。「マニュアル」（有料）では、ISO・シャッター速度・ピント位置を自分で決められます。それぞれ「自動」を押すと自動に戻ります。レンズは、お使いの iPhone にあるもの（超広角・広角・望遠）から選べます。</p>
+            <h3>補助表示（4つ）</h3>
+            <p>撮影画面に、グリッド・水平器・ヒストグラム・白飛びの警告を重ねられます。水平器は、水平から1度以内になると琥珀色に変わります。白飛びの警告は、明るすぎて白くつぶれる部分に赤い縞模様を出します（プレビューの映像で判定する目安です）。「設定」の「撮影画面の補助表示」で、それぞれオンとオフを切り替えます。</p>
+            <h3>RAW も一緒に保存（有料）</h3>
+            <p>「設定」の「RAW も一緒に保存」をオンにすると、RAW（DNG）が仕上げた写真と同じ1枚として「写真」アプリに残ります。「保存の形」では、仕上げた写真を HEIC と JPEG から選べます。</p>
+            <h3>位置情報</h3>
+            <p>「設定」の「位置情報を記録」をオンにすると、写真に撮った場所が付きます。許可のお願いは、オンにしたときだけです。許可をしていないときは設定画面に案内が出るので、「設定を開く」から許可できます。オフのままなら、場所は記録されません。</p>
+            <h3>撮ったあとの見比べ（有料）</h3>
+            <p>撮影画面のモード切り替えの右にあるボタン（または「設定」の「撮ったあとに見比べる」）をオンにすると、撮影のあとに、処理なしの写真と iPhone 標準の写真が並びます。ピンチで拡大、ドラッグで動かすと、2枚が同じ位置・倍率で動きます。「処理なしを残す」「標準を残す」「両方残す」から選べます。処理なしの写真は、すでに「写真」に保存してあります。「標準を残す」を選ぶと標準の写真が追加で保存され、処理なしの写真も残るので、いらなければ「写真」アプリで削除してください。</p>
+            <h3>直前の写真</h3>
+            <p>撮影画面の左下の小さな写真をタップすると、直前に撮った写真を大きく見られます。ピンチで拡大でき、ダブルタップで元に戻ります。「共有」で送ったり、「写真」アプリで開いたりできます。</p>
+            <h3>ロック画面・コントロールセンター・アクションボタンから撮る</h3>
+            <p>iPhone をロックしたまま、ロック画面のカメラのボタンから Bright Cam で撮れます。コントロールセンターに Bright Cam のコントロールを追加すると、そこからも開けます。アクションボタンのある iPhone では、「設定」アプリのアクションボタンで Bright Cam のコントロールを選ぶと、ボタンを押して開けます。ロック中は、設定・直前の写真・見比べ・購入の画面は出ません。購入済みなら、ロック中も有料の仕上げとマニュアルが使え、設定で RAW も一緒に保存をオンにしていれば RAW も残ります。ロック中に「写真」へ直接保存できなかった写真は一時的に預かり、Bright Cam を開いたときに「写真」アプリへ追加します。</p>
+            <h3>カメラコントロール（iPhone 16 以降）</h3>
+            <p>カメラコントロールのある iPhone では、押して撮影できます。指でなぞって、明るさと仕上げを変えられます。未購入のときの仕上げは「そのまま」と「風景」の2つ、購入後は4つです。</p>
+            <h3>購入と復元</h3>
+            <p>有料の機能（仕上げ「人物」「鮮やか」、マニュアル、RAW も一緒に保存、撮ったあとの見比べ）は、一度の購入でずっと使えます。広告はなく、サブスクリプション（毎月・毎年の支払い）もありません。有料の機能を押すと購入画面が出ます。機種変更や再インストールのあとは、「設定」の「購入を復元」を押すと戻ります。</p>
+            <h3>保存に失敗したとき</h3>
+            <p>「保存できませんでした」と表示されても、写真は消えていません。「もう一度保存」を押すと保存し直せます。「写真」への追加が許可されていないときは、設定アプリで許可してから、もう一度保存してください。</p>
+            <h3>シャッター音</h3>
+            <p>Bright Cam には、シャッター音を消す設定はありません。日本の iPhone では、カメラの音を消すことはできません。静かな場所では、周りの人に配慮して撮ってください。</p>
+        </div>
+
+        <div lang="en">
+            <h3>Finishes (four)</h3>
+            <p>Choose from four color finishes. Natural and Landscape are free. Landscape deepens sky blues and greens slightly and raises contrast a touch. Portrait keeps skin tones and adds a slight warmth. Vivid boosts dull colors the most. Portrait and Vivid are paid. The preview also shows the finish you chose, but it is only a guide: the saved photo may differ slightly in color and brightness.</p>
+            <h3>Simple and Manual</h3>
+            <p>In Simple, tap the screen to set focus and brightness there, and use the slider to adjust brightness. In Manual (paid), you set ISO, shutter speed and focus yourself. Tap Auto next to each one to return it to automatic. You can pick any lens your iPhone has (Ultra Wide, Wide, Tele).</p>
+            <h3>Guides (four)</h3>
+            <p>Overlay a grid, a level, a histogram and a highlight clipping warning on the camera screen. The level turns amber when you are within 1 degree of level. The clipping warning shows red stripes over areas that are so bright they turn pure white (an estimate based on the preview). Turn each on or off in Settings under Camera screen guides.</p>
+            <h3>Also save RAW (paid)</h3>
+            <p>Turn on Also save RAW in Settings to keep the RAW (DNG) together with the finished photo as one item in the Photos app. Save format lets you choose HEIC or JPEG for the finished photo.</p>
+            <h3>Location</h3>
+            <p>Turn on Record location in Settings to add where a photo was taken. Bright Cam asks for permission only when you turn this on. If access is off, Settings shows a note, and Open Settings takes you to where you can allow it. While it is off, no location is recorded.</p>
+            <h3>Compare after shooting (paid)</h3>
+            <p>Turn on the button to the right of the mode switch on the camera screen (or Compare after shooting in Settings) to see the unprocessed photo and the iPhone standard photo side by side after each shot. Pinch to zoom and drag to move; both photos zoom and move together. Choose Keep unprocessed, Keep standard or Keep both. The unprocessed photo is already saved to Photos. Keep standard saves the standard photo as an extra and the unprocessed photo stays, so delete it in the Photos app if you do not need it.</p>
+            <h3>Last Photo</h3>
+            <p>Tap the small photo at the bottom left of the camera screen to see your last shot larger. Pinch to zoom and double-tap to reset. Use Share to send it, or open it in the Photos app.</p>
+            <h3>Shooting from the Lock Screen, Control Center and Action button</h3>
+            <p>You can shoot with Bright Cam without unlocking, from the camera button on the Lock Screen. Add the Bright Cam control to Control Center to open it from there as well. On an iPhone with an Action button, choose the Bright Cam control for the Action button in the Settings app. While locked, Settings, Last Photo, Compare and purchase screens are not shown. If you have purchased, the paid finishes and Manual also work while locked, and RAW is saved too if Also save RAW is on in Settings. Photos that could not be saved to Photos directly while locked are kept temporarily and added to the Photos app when you open Bright Cam.</p>
+            <h3>Camera Control (iPhone 16 and later)</h3>
+            <p>On an iPhone with Camera Control, press it to take a photo. Slide your finger on it to change brightness and finish. Before purchase you can pick two finishes (Natural and Landscape); after purchase, all four.</p>
+            <h3>Purchase and restore</h3>
+            <p>The paid features (Portrait and Vivid finishes, Manual, Also save RAW, and Compare after shooting) unlock with a single purchase, for good. There are no ads and no subscription (no monthly or yearly payments). Tapping a paid feature shows the purchase screen. After changing iPhones or reinstalling, tap Restore Purchases in Settings to get it back.</p>
+            <h3>If saving fails</h3>
+            <p>If you see Couldn't Save, the photo has not been lost. Tap Save Again to try once more. If adding to Photos is not allowed, allow it in the Settings app first and then save again.</p>
+            <h3>Shutter sound</h3>
+            <p>Bright Cam has no setting to turn off the shutter sound, and the camera sound cannot be turned off on iPhones sold in Japan. In quiet places, please be considerate of the people around you.</p>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card" id="faq">
+        <h2 lang="ja">よくある質問</h2>
+        <h2 lang="en">FAQ</h2>
+
+        <div lang="ja">
+            <details class="faq-item">
+                <summary>撮った写真はどこに保存されますか？</summary>
+                <p>iPhone の「写真」アプリに保存されます。Bright Cam の中に別に溜めることはありません。写真や位置情報を、Bright Cam が外部に送ることもありません。</p>
+            </details>
+            <details class="faq-item">
+                <summary>無料でどこまで使えますか？</summary>
+                <p>仕上げ「そのまま」「風景」、シンプルの撮影、処理なしの撮影、補助表示4つ、位置情報の記録、ロック画面・コントロールセンター・アクションボタン・カメラコントロールからの起動は無料です。仕上げ「人物」「鮮やか」、マニュアル、RAW も一緒に保存、撮ったあとの見比べが有料です。</p>
+            </details>
+            <details class="faq-item">
+                <summary>機種変更したら、購入は引き継げますか？</summary>
+                <p>同じ Apple ID で、新しい iPhone の Bright Cam を開き、「設定」の「購入を復元」を押してください。もう一度払う必要はありません。</p>
+            </details>
+            <details class="faq-item">
+                <summary>「カメラが使えません」などと出て、撮影できません。</summary>
+                <p>「カメラの許可がありません」と出たときは、「設定を開く」からカメラの使用を許可してください。「「写真」への保存が許可されていません」と出たときも、「設定を開く」から「写真」への追加を許可してください。「カメラが使えません」と出たときは、ほかのアプリがカメラを使っているか、iPhone が熱くなっていることがあります。少し待つか、ほかのアプリを閉じてからもう一度開いてください。</p>
+            </details>
+            <details class="faq-item">
+                <summary>RAW も一緒に保存したのに、RAW が付かなかった写真があります。</summary>
+                <p>RAW を取り込めなかったときや、そのカメラが処理なしの撮影に対応していないときは、標準の処理で保存し、その旨をお知らせします。</p>
+            </details>
+        </div>
+
+        <div lang="en">
+            <details class="faq-item">
+                <summary>Where are my photos saved?</summary>
+                <p>They are saved to the iPhone Photos app. Bright Cam does not keep a separate copy, and it does not send your photos or location anywhere.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What can I use for free?</summary>
+                <p>The Natural and Landscape finishes, Simple shooting, unprocessed shooting, all four guides, location recording, and opening from the Lock Screen, Control Center, Action button and Camera Control are free. The Portrait and Vivid finishes, Manual, Also save RAW and Compare after shooting are paid.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Does my purchase carry over to a new iPhone?</summary>
+                <p>Open Bright Cam on the new iPhone with the same Apple ID and tap Restore Purchases in Settings. You do not have to pay again.</p>
+            </details>
+            <details class="faq-item">
+                <summary>I see "Camera Unavailable" or similar and can't shoot.</summary>
+                <p>If you see "Camera Access Is Off", tap Open Settings and allow camera access. If you see "Saving to Photos Is Off", tap Open Settings and allow adding to Photos. If you see "Camera Unavailable", another app may be using the camera, or your iPhone may be hot. Wait a moment or close the other app, then open Bright Cam again.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Some photos have no RAW even though I turned on Also save RAW.</summary>
+                <p>When the RAW data could not be captured, or the camera does not support unprocessed shooting, the photo is saved with standard processing and Bright Cam tells you.</p>
+            </details>
+        </div>
+    </div>
+
+    <!-- お問い合わせ / Contact -->
+    <div class="card" id="contact">
+        <h2 lang="ja">お問い合わせ</h2>
+        <h2 lang="en">Contact</h2>
+        <p lang="ja">サポートとプライバシーポリシーは、「このアプリについて」のリンクから開けます。</p>
+        <p lang="en">You can open Support and the Privacy Policy from the links in About This App.</p>
+        <ul lang="ja">
+            <li>サポート: <a href="https://regenbogen-dev.github.io/BrightCamApp/">https://regenbogen-dev.github.io/BrightCamApp/</a></li>
+            <li>プライバシーポリシー: <a href="https://regenbogen-dev.github.io/BrightCamApp/privacy.html">https://regenbogen-dev.github.io/BrightCamApp/privacy.html</a></li>
+        </ul>
+        <ul lang="en">
+            <li>Support: <a href="https://regenbogen-dev.github.io/BrightCamApp/">https://regenbogen-dev.github.io/BrightCamApp/</a></li>
+            <li>Privacy Policy: <a href="https://regenbogen-dev.github.io/BrightCamApp/privacy.html">https://regenbogen-dev.github.io/BrightCamApp/privacy.html</a></li>
+        </ul>
+        <a class="contact-link" href="mailto:regenbogen.dev@gmail.com" lang="ja">メールで問い合わせ（regenbogen.dev@gmail.com）</a>
+        <a class="contact-link" href="mailto:regenbogen.dev@gmail.com" lang="en">Contact via Email (regenbogen.dev@gmail.com)</a>
+    </div>
+
+    <!-- ライセンス / Licenses -->
+    <div class="card">
+        <h2 lang="ja">ライセンス</h2>
+        <h2 lang="en">Licenses</h2>
+        <p lang="ja">Bright Cam はサードパーティのライブラリ・フォント・素材を使っていません。</p>
+        <p lang="en">Bright Cam does not use any third-party libraries, fonts or assets.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Regenbogen</p>
+    <p lang="ja"><a href="privacy.html">プライバシーポリシー</a></p>
+    <p lang="en"><a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+    function toggleLang() {
+        const root = document.documentElement;
+        const isJa = root.classList.contains('lang-ja');
+        root.classList.replace(isJa ? 'lang-ja' : 'lang-en', isJa ? 'lang-en' : 'lang-ja');
+        root.lang = isJa ? 'en' : 'ja';
+    }
+    if (!navigator.language.startsWith('ja')) {
+        toggleLang();
+    }
+</script>
+
+</body>
+</html>
